@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Taro Portfolio</title>
+  <script>
+    window.onload = function () {
+      const clickEvent = () => {
+
+//要件１
+        const characters = [
+          {name:"下柳剛",age:42},
+          {name:"宮本浩次",age:32},
+          {name:"井端弘和",age:20},
+          {name:"岩瀬仁紀",age:12}
+        ];
+
+        console.log("-------------------");
+
+        for (let i =0;i < characters.length;i++) {
+          const character = characters[i];
+
+          if (character.age >= 20) {
+            console.log(`${character.name}さんの年齢は${character.age}歳です。20歳を超えています。`);
+          } else {
+            console.log (`${character.name}さんの年齢は${character.age}歳です。20歳まで${20 - character.age}年です。`);
+          }
+        }
+//要件１
+
+//要件2
+  console.log("-------------------")
+
+  const numbers = [29342,45342,23419283,148458552];
+        
+  let i = 0;
+  while (i < numbers.length) {
+
+    const number = numbers [i];
+
+      if (number % 2 === 1) {
+        console.log(`${number}は奇数です。7で割ったあまりは${number % 7}です。`)
+      } else {
+        console.log(`${number}は偶数です。7で割ったあまりは${number % 7}です。`)
+      }
+      i++;
+  }//while
+
+  //i++の時点で1から始まっている＞undeも出る
+//要件2
+
+      };//クリックイベント
+      let button = document.getElementById("button");
+      button.addEventListener("click", clickEvent);
+    };
+  </script>
+</head>
+<body>
+<!-- header -->
+  <header>
+    <div class="header_inner">
+      <section class="header_left">
+        <h1><span>T</span>aro Portfolio</h1>
+      </section>
+      <ul class="header_right">
+        <li><a href="#self">自己紹介</a></li>
+        <li><a href="#sample">実装サンプル</a></li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+    <div class="main_visual"></div>
+  </header>
+<!-- /header -->
+
+<!-- self -->
+  <div class="self_wrapper mgt" id="self">
+    <div class="container">
+      <section class="self_lead">
+        <h2>自己紹介<span>Self&nbsp;Introduction</span></h2>
+        <div class="text">
+          <p>私の名前は<span>就労太郎</span>です。アメリカ合衆国出身で現在はディーキャリアITエキスパートにて、プログラミング学習に取り組んでおります。<br> どうぞよろしくお願いいたします。</p>
+        </div>
+        <img src="images/img01.jpg" alt="">
+      </section>
+      
+      <div class="self_boxs">
+
+        <div class="favorites self_inner">
+          <section class="lead">
+            <h3 class="sub_title">好きなもの・趣味<span>Favorites</span></h3>
+          </section>
+          <ul>
+            <li>スポーツ観戦</li>
+            <li>読書</li>
+            <li>アウトドア</li>
+          </ul>
+        </div>
+
+        <div class="web_sites self_inner">
+          <section class="lead">
+            <h3 class="sub_title">Webサイト<span>Web&nbsp;Sites</span></h3>
+          </section>
+          <ul>
+            <li><a href="https://dd-career.com/" target="_blank">ディーキャリア</a></li>
+            <li><a href="https://www.google.com/" target="blank">Google</a></li>
+            <li><a href="https://www.yahoo.co.jp/" target="blank">Yahoo!&nbsp;Japan</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<!-- /self -->
+
+<!-- sample -->
+  <div class="sample_wrapper mgt" id="sample">
+    <div class="container">
+      <section class="sample">
+        <h2>実装サンプル<span>Sample</span></h2>
+      </section>
+    </div>
+  </div>
+<!-- /sample -->
+
+<!-- gallery -->
+<div class="gallery_wrapper mgt">
+  <div class="container">
+    <h3 class="bb">画像ギャラリー</h3>
+
+    <div class="gallery_inner">
+      <div class="gallery_wrap">
+        <div class="gallery">
+            <img src="images/gallery01.jpg" alt="">
+            <h4>宇宙飛行士と月</h4>
+          <div class="text">
+            <p>幻想的な色彩の月と雲の前に、宇宙飛行士が立っています。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery_wrap">
+        <div class="gallery">
+          <img src="images/gallery02.jpg" alt="">
+          <h4>朝日と石</h4>
+          <div class="text">
+            <p>積み重ねられた石を、朝日が照らしています。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery_wrap">
+        <div class="gallery">
+          <img src="images/gallery03.jpg" alt="">
+          <h4>鏡のような湖</h4>
+          <div class="text">
+            <p>空と海がどちらかわからなくなるような、鏡のような湖です。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery_wrap">
+        <div class="gallery">
+          <img src="images/gallery04.jpg" alt="">
+          <h4>ハートの風船</h4>
+          <div class="text">
+            <p>青空をバックに、たくさんの色とりどりのハートの風船が浮いています。</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+<!-- /gallery -->
+
+<!-- form -->
+<div class="form_wrapper mgt">
+  <div class="container">
+    <h3 class="bb">お問い合わせフォーム</h3>
+    <div class="form_wrap">
+
+      <div>
+        <ul>
+          <li>必須</li>
+          <li>名前</li>
+        </ul>
+        <input type="text" value="">
+      </div>
+
+      <div>
+        <ul>
+          <li>必須</li>
+          <li>メールアドレス</li>
+        </ul>
+        <input type="text" value="">
+      </div>
+
+      <div>
+        <ul>
+          <li>必須</li>
+          <li>年齢</li>
+        </ul>
+        <input type="text" value="">
+      </div>
+
+      <div>
+        <ul>
+          <li>必須</li>
+          <li>お問い合わせ内容</li>
+        </ul>
+        <input type="text" value="">
+      </div>
+
+      <div class="btn">
+        <button type="submit">送信</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- /form -->
+
+<!-- JavaScript -->
+  <div class="js_wrapper mgt">
+    <div class="container">
+      <h3 class="bb">JavaScript課題</h3>
+      <div class="btn">
+        <button type="submit" id="button">実行！</button>
+      </div>
+    </div>
+  </div>
+<!-- /JavaScript -->
+
+<!-- footer -->
+  <footer class="mgt">
+    <div class="footer_inner">
+      <small>Copyright &copy; 2022 Taro</small>
+    </div>
+  </footer>
+<!-- /footer -->
+</body>
+</html>
